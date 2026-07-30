@@ -170,14 +170,6 @@ scene = run_load_pipeline(
 ```
 
 For dense reconstruction, create a `DenseConfig` and call
-`run_mvs_pipeline(config)`. It writes `dense.ply` to `config.mvs_dir` rather
+`run_mvs_pipeline(config)`. It creates `dense/*.bin` to `config.mvs_dir` rather
 than returning the fused point cloud in memory.
 
-### Making it installable
-
-The examples above work while this repository is on Python's import path. For
-another project to install and import it reliably, add a `pyproject.toml` and
-give the package a real name (for example, `colmap-pipeline`). Pixi's
-`pixi.toml` is excellent for managing this project's environment, but it is
-not Python package metadata and does not make the project installable with
-`pip`.
